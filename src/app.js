@@ -5,7 +5,7 @@ async function postData(url = '', data = {}) {
       method: 'POST', // *GET, POST, PUT, DELETE, etc.
       mode: 'no-cors', // no-cors, *cors, same-origin
       cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-      credentials: 'omit', // include, *same-origin, omit
+      credentials: 'same-origin', // include, *same-origin, omit
       headers: {
         'Content-Type': 'application/json'
         // 'Content-Type': 'application/x-www-form-urlencoded',
@@ -17,10 +17,10 @@ async function postData(url = '', data = {}) {
     return response; // parses JSON response into native JavaScript objects
   }
   
-  postData('http://localhost:8080/users', 
-    {
-       
-    })
+  postData('http://localhost:8080/authenticate', {
+    "username":"chxei",
+    "password":"chxei"
+})
     .then(data => {
       console.log(data); // JSON data parsed by `data.json()` call
     });
