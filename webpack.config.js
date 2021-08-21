@@ -8,7 +8,7 @@ const assets = [
   },
 ];
 module.exports = {
-    mode: 'development',
+    mode: 'production',
   plugins: [
     new HtmlWebpackPlugin({
         filename: 'index.html',
